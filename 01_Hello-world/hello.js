@@ -12,9 +12,3 @@ console.log("The Math value",math.muntple(10,20));
 
 // console.log(math.addFun(1,2),math.multiFun(20,20),math.subFun(2,3));
 // console.log(addFun(2,2),subFun(2,2),multiFun(2,2));
-
-
-
-
-
-
