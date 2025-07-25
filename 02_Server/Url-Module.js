@@ -8,7 +8,7 @@ const myServer = http.createServer((req , res)=>{
        return res.end();
     }
 
-    const log = `${Date.now()} : ${req.url} : New Request \n`;
+    const log = `${Date.now()} : ${req.url} : ${req.method} New Request \n`;
     const myUrl = url.parse(req.url , true);
     
     fs.appendFile("text.txt",log , (err,data)=>{
