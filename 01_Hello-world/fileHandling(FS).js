@@ -27,10 +27,14 @@ const fs = require("fs");
 // });
 
 // const result = fs.appendFileSync("./text.txt","\nEmail : Sahilkhola@124")
-fs.appendFile("text.txt", "\nCity : Gurugram", (err, res) => {
-    if (err) {
-        console.log("error", err);
-    } else {
-        console.log(res);
-    }
-})
+// fs.appendFile("text.txt", "\nCity : Gurugram", (err, res) => {
+//     if (err) {
+//         console.log("error", err);
+//     } else {
+//         console.log(res);
+//     }
+// })
+
+// console.log(fs.statSync("./text.txt"));
+fs.unlinkSync("copy.txt");
+// fs.cpSync("./text.txt","copy.txt")
