@@ -1,14 +1,17 @@
-// console.log("hey My name is Sahil Khola");
-
+console.log("Hello World!");
 
 const math = require("./math");
-// const {addFun,multiFun,subFun} = require("./math");
+// const { add, subtract, multiply } = require("./math");
+
+// console.log(math.add(1, 2));
+// console.log(math.subtract(1, 2));
+// console.log(math.multiply(1, 2));
+
+// console.log(add(1, 2));
+// console.log(subtract(1, 2));
+// console.log(multiply(1, 2));
 
 
-
-console.log("The Math value",math.add(10,20));
-console.log("The Math value",math.sub(10,20));
-console.log("The Math value",math.muntple(10,20));
-
-// console.log(math.addFun(1,2),math.multiFun(20,20),math.subFun(2,3));
-// console.log(addFun(2,2),subFun(2,2),multiFun(2,2));
+console.log(math.add(1, 2));
+console.log(math.subtract(1, 2));
+console.log(math.multiply(1, 2));

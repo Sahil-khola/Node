@@ -1,21 +1,21 @@
-// function add(a,b){
-//     return a+b;
+// function add(a, b) {
+//     return a + b;
 // }
 
-// function sub(a,b) {
-//     return a-b;
+// function subtract(a, b) {
+//     return a - b;
 // }
 
-// function muntple(a,b) {
-//     return a*b;
+// function multiply(a, b) {
+//     return a * b;
 // }
 
-// module.exports={
-//     addFun : add,
-//     subFun :sub,
-//     multiFun :muntple,
+// module.exports = {
+//     add,
+//     subtract,
+//     multiply
 // }
 
-// exports.add = (a,b)=>a+b;
-// exports.sub = (a,b)=>a-b;
-// exports.muntple = (a,b)=>a*b;
+exports.add = (a, b) => a + b;
+exports.subtract = (a, b) => a - b;
+exports.multiply = (a, b) => a * b;
