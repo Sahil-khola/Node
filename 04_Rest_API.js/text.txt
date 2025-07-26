@@ -1,0 +1,32 @@
+Ques - What is Api?
+Ans -  Api is a set of rules and protocols that allows different software applications to communicate with each other and exchange data. It defines the methods and data formats that applications can use to request and exchange information, enabling integration and functionality across different systems.
+
+ques - types of api
+ans - There are several types of APIs, including:
+1. RESTful APIs
+2. SOAP APIs
+3. GraphQL APIs
+4. WebSocket APIs
+5. RPC APIs
+
+ques - What is REST API?
+ans - REST API (Representational State Transfer API) is an architectural style for designing networked applications. It uses standard HTTP methods (GET, POST, PUT, DELETE) to perform operations on resources, which are identified by URLs. REST APIs are stateless and can return data in various formats, such as JSON or XML, making them lightweight and easy to use for web services.
+
+ques - What is GraphQL API?
+ans - GraphQL API is a query language for APIs and a runtime for executing those queries with your existing data. It allows clients to request exactly the data they need, making it more efficient than traditional REST APIs. With GraphQL, clients can specify the structure of the response, reducing over-fetching and under-fetching of data.
+
+ques - What is WebSocket API?
+ans - WebSocket API is a protocol that provides full-duplex communication channels over a single TCP connection. It allows real-time communication between the client and server, enabling bidirectional data exchange. WebSocket APIs are commonly used for applications that require real-time updates, such as chat applications or live streaming services.
+
+ques - What is RPC API?
+ans - RPC API (Remote Procedure Call API) is a type of API that allows a client to call a procedure or function on a remote server. It enables communication between different systems or applications, allowing them to interact and exchange data. RPC APIs are commonly used in distributed systems and microservices architectures.
+
+ques - difference between rest and graphql api
+Ans - The main differences between REST and GraphQL APIs are:
+    1. REST APIs use HTTP methods to perform operations on resources, while GraphQL APIs use a query language to request specific data.
+    2. REST APIs are designed to be stateless, while GraphQL APIs are designed to be stateful.
+    3. REST APIs can return data in various formats, while GraphQL APIs return data in a single format.
+    4. REST APIs are more flexible and scalable, while GraphQL APIs are more efficient and easier to use.
+
+ques - difference between api and rest api
+ans - API (Application Programming Interface) is a general term that refers to any set of rules and protocols that allow different software applications to communicate with each other and exchange data. REST API (Representational State Transfer API) is a specific type of API that follows the REST architectural style and uses HTTP methods to perform operations on resources.
