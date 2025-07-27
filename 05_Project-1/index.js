@@ -4,6 +4,15 @@ const app = express();
 const fs = require("fs")
 
 app.use(express.urlencoded({extended : false}))
+app.use((req, res , next)=>{
+    console.log("middleware 1");
+    // res.end("hey there from 1")
+    next();
+})
+app.use((req, res , next)=>{
+    console.log("middleware 2");
+    res.end("hey there")
+})
 
 app.get("/user", (req, res) => {
     const html = `
@@ -13,6 +22,7 @@ app.get("/user", (req, res) => {
     `
     res.send(html)
 })
+
 
 
 app.get("/api/user", (req, res) => {
@@ -31,8 +41,9 @@ app.route("/api/user/:id")
         const foundUser = user.find((user) => user.id === id);
         return res.json(foundUser);
     }).delete((req, res) => {
-        const id = body.id 
-        res.json({ status: "pending" })
+        const id = Number(req.params.id);
+        const remove = user.splice((user)=>user.id === id)
+        return res.json(remove);
     }).patch((req, res) => {
         // update user by id
         res.json({ status: "pending" })
