@@ -1,17 +1,18 @@
 const express = require('express');
 const app = express();
 
-app.use((req,res,next)=>{
-  console.log("Middleware One ",req.url,req.method);
-  // res.send("Sahil Khola  ")
+app.get("/",(req,res,next)=>{
+  console.log("Come from first middleware",req.url,req.method);
   next();
 })
-app.use((req,res,next)=>{
-  console.log("Middleware Second  ",req.url,req.method);
-  res.send("Sahil khola <p>From second Middleware </p>")
+
+app.use("/about",(req,res,next)=>{
+  console.log("Come from Second  middleware",req.url,req.method);
 })
-app.use((req,res,next)=>{
-  console.log("Middleware Third ",req.url,req.method);
+
+app.use("/",(req,res,next)=>{
+  console.log("Come from another middleware",req.url,req.method);
+  next();
 })
 
 
