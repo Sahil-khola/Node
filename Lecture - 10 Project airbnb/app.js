@@ -5,6 +5,7 @@ const userRouter = require("./routes/userRouter")
 const hostRouter = require("./routes/hostRouter")
 
 const app = express();
+app.use(express.static(path.join(rootdir, "public")));
 app.use(express.urlencoded());
 
 app.use(userRouter);
