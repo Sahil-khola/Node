@@ -1,41 +1,19 @@
 const express = require("express");
-const BodyParse = require("body-parser");
-const bodyParser = require("body-parser");
+const path = require("path");
+const rootdir = require("./utils/pathutils");
+const userRouter = require("./routers/userRouter");
+const contactRouter = require("./routers/contact");
+
 const app = express();
 
-app.use("/", (req, res, next) => {
-  console.log("First dummy middleware", req.url, req.method);
-  next();
-});
+app.use(express.urlencoded());
 
-app.use("/", (req, res, next) => {
-  console.log("second dummy Middleware", req.url, req.method);
-  next();
-});
+app.use(userRouter);
+app.use(contactRouter)
 
-app.get("/", (req, res, next) => {
-  console.log("Handel for / get ", req.url, req.method);
-  res.send("<h1>Sahil khola </h1>");
-});
-
-app.get("/contact", (req, res, next) => {
-  console.log("Handel for /Contact-us  ", req.url, req.method);
-  res.send(`
-    <h1>Plz Give some details here</h1>
-    <form action="/contact" method="POST">
-    <input type="text" name="name" placeholder="enter user name"><br>
-    <input type="email" name="email" placeholder="enter user email"><br>
-    <input type="submit">
-    </form>
-    `);
-});
-
-app.use(bodyParser.urlencoded());
-
-app.post("/contact", (req, res, next) => {
-  console.log("Handling Request on POST ", req.url, req.method,req.body);
-  res.send("<h3>We Will Contact Shortly</h3>");
-});
+app.use((req, res, next) => {
+  res.status(404).sendFile(path.join(rootdir, "views", "404.html"));
+})
 
 const port = 3000;
 app.listen(port, () => {
