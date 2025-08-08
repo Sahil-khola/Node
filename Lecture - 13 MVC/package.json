@@ -1,5 +1,5 @@
 {
-  "name": "lecture---13-mvc",
+  "name": "lecture---10-project-airbnb",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
@@ -8,5 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
