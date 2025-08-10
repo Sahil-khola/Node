@@ -1,5 +1,0 @@
-Event Driven Programming -->
-Event Occurs: An event occurs, such as a user clicking a button.
-Event is Registered: The event is registered with the event loop.
-Event Listener is Triggered: The event loop checks for event listeners registered for the occurred event and triggers the corresponding event listener.
-Event Listener Executes: The event listener executes, performing the desired action.

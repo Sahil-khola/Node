@@ -1,4 +1,0 @@
-Streams -> lagatar data bhejta hai
-chinku -> jo stream bhejta hai vo chinku bhejta hai vo bhi chote chote data bhejta hai
-buffer -> chunk ko oder of sequence me convert karta hai
-
