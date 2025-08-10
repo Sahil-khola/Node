@@ -1,20 +1,26 @@
+// 1. Exporting Multiple Items
 
-// console.log("Sahil ");
+const getName = () => {
+  return "Sahil Khola";
+};
 
-// function add(a,b){
-// return a+b  
-// };
+const getAge = () => {
+  return 21;
+};
 
-// function sub(a,b) {
-//   return a-b
-// }
-
-// function mul(a,b) {
-//   return a*b
-// }
-
-// module.exports={add,sub,mul}
-
-export function name(){
-  console.log("Khola");
+function person() {
+ return "Person";
 }
+
+// Method 1: Exporting multiple items
+// exports.getName = getName;
+// exports.getAge = getAge;
+
+// Method 2: Exporting an object with multiple properties
+// module.exports = {
+//   getName,
+//   getAge
+// }
+
+// Method 2: Exporting a single class
+module.exports = person;
