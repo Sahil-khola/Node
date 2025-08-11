@@ -13,6 +13,6 @@
 // console.log(add(2,3));
 // console.log(sub(2,3));
 
-import{mul,div} from "./03_ES_Module.js"
-console.log(mul(2,3));
-console.log(div(2,3));
+// import{mul,div} from "./03_ES_Module.js"
+// console.log(mul(2,3));
+// console.log(div(2,3));
