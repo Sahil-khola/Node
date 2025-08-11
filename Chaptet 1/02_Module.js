@@ -22,5 +22,5 @@
 //   getAge
 // }
 
-// Method 2: Exporting a single class
+// Method 3: Exporting a single class
 module.exports = person;
