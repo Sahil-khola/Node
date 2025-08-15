@@ -3,12 +3,15 @@ const app = express();
 app.use(express.json());
 const data = require("./data.json");
 
+
 // Middleware------------------------------------------------>
 // 1 APPLICATION-LEVEL MIDDLEWARE--->
 app.use((req, res, next) => {
   console.log(req.hostname, req.url, req.ip);
   next();
 });
+
+
 
 // 2 Route-level middleware--->
 const auth = (req, res, next) => {
