@@ -3,8 +3,10 @@ const app = express();
 
 
 
+app.use(express.static("public"));
 app.get("/",(req,res)=>{
-res.send("Sahil  Khola ");
+// res.send("Sahil  Khola ");
+res.render("index.html");
 })
 
 app.listen(3000, () => {
