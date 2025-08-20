@@ -1,17 +1,28 @@
 const express = require("express");
 const app = express();
+
 const router = require("./routes/product");
-const userRouter = require("./routes/user");
 
 app.get("/", (req, res) => {
-  res.send(`<a href='/products'>Products</a>
-            <a href='/users'>Users</a>`);
+  res.send(`<a href='/products'>Products</a>`);
 });
+
+app.use(express.json());
+app.use(express.urlencoded)
+
+// DB connection----->
+const mongoose = require("mongoose");
+
+mongoose
+  .connect("mongodb://localhost:27017/ecommerce")
+  .then(() => console.log("DB connected"))
+  .catch((err) => console.log("DB error"));
+
+
 
 // CRUD API ------->
 
 app.use(router);
-app.use(userRouter);
 
 // server start
 const port = 3000;
