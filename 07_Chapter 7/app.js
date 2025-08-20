@@ -8,7 +8,6 @@ app.get("/", (req, res) => {
 });
 
 app.use(express.json());
-app.use(express.urlencoded)
 
 // DB connection----->
 const mongoose = require("mongoose");
