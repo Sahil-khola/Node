@@ -26,7 +26,6 @@ const oneProduct = async (req, res) => {
 const replaceProduct = async (req, res) => {
   try {
     const id = req.params.id;
-
     if (req.body._id) {
       delete req.body._id;
     }
