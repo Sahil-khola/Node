@@ -1,17 +1,10 @@
 const user = require("../model/user");
 
-
-const  createUser = async (req, res) => {
-    const newUser = new user(req.body);
-    await newUser.save();
-    res.json(newUser);
-}
-
-
 const allUsers = async (req, res) => {
     const users = await user.find();
     res.json(users);
 };
+
 
 const oneUser = async (req, res) => {
     const id = req.params.id;
@@ -22,6 +15,7 @@ const oneUser = async (req, res) => {
     res.json(singleUser);
 }
 
+
 const update = async (req, res) => {
     const id = req.params.id;
     const updatedUser = await user.findByIdAndUpdate(id, req.body, { new: true });
@@ -30,6 +24,7 @@ const update = async (req, res) => {
     }
     res.json(updatedUser);
 }
+
 
 const remove = async (req, res) => {
     const id = req.params.id;
@@ -41,7 +36,6 @@ const remove = async (req, res) => {
 } 
 
 module.exports = {
-    createUser,
     allUsers,
     oneUser,
     update,
