@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            margin: auto;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f1f1f1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+        }
+        .card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+            transform: scale(1);
+            transition: all .3s ease-in-out;
+        }
+        .card:hover img {
+            transform: scale(1.1);
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .container {
+            padding: 2px 16px;
+        }
+        .card:hover:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+        .card:hover .container {
+            z-index: 20;
+        }
+    </style>
+</head>
+<body>
+    <% if (products) { %>
+        <h1 style="text-align: center;">Product List</h1>
+        <% products.forEach(product => { %>
+            <div class="card">
+                <img src="https://picsum.photos/150/150?random=<%= Math.floor(Math.random() * 100) %>" alt="">
+                <div class="container">
+                    <h4><b><%= product.title %></b></h4>
+                    <p><%= product.description %></p>
+                    <p>Price: <%= product.price %></p>
+                    <p>Discount: <%= product.discountPercentage %> %</p>
+                    <p>Rating: <%= product.rating %></p>
+                    <p>Stock: <%= product.stock %></p>
+                    <p>Brand: <%= product.brand %></p>
+                    <p>Category: <%= product.category %></p>
+                    <p>Thumbnail: <%= product.thumbnail %></p>
+                </div>
+            </div>
+        <% }); %>
+    <% } %>
+</body>
+</html>
+
